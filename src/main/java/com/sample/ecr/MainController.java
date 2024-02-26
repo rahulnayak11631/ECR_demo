@@ -1,6 +1,8 @@
 package com.sample.ecr;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -8,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping("health")
-    public String getMethodName() {
-        return "Healthy!!!";
+    public ResponseEntity<String> getMethodName() {
+        return ResponseEntity.status(HttpStatus.OK).body("AWS ECR DEMO!");
     }
     
 
