@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
+
 @RestController
 public class MainController {
 
@@ -13,6 +14,11 @@ public class MainController {
     public ResponseEntity<String> getMethodName() {
         return ResponseEntity.status(HttpStatus.OK).body("AWS ECR DEMO!");
     }
+    @GetMapping("test")
+    public ResponseEntity<String> getTestDetails() {
+        return ResponseEntity.status(HttpStatus.OK).body("Test!");
+    }
+    
     
 
     
